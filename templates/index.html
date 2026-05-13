@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Script Generator</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; padding: 40px; }
+        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+        h2 { color: #1a8a7a; text-align: center; margin-bottom: 25px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; color: #333; }
+        input, select, textarea { width: 100%; margin-bottom: 20px; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 14px; }
+        button { width: 100%; padding: 15px; background-color: #1a8a7a; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #146e62; }
+        
+        /* Result Box Style */
+        .result-box { margin-top: 30px; padding: 20px; background-color: #f9fff3; border: 1px solid #d1e7dd; border-radius: 8px; border-left: 6px solid #1a8a7a; }
+        .result-box h3 { margin-top: 0; color: #1a8a7a; }
+        .script-text { white-space: pre-wrap; color: #444; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Script AI Generator</h2>
+        
+        <form action="/generate" method="post">
+            <label>Topic</label>
+            <input type="text" name="topic" placeholder="e.g. Benefits of AI" required>
+
+            <label>Tone</label>
+            <select name="tone">
+                <option value="Professional">Professional</option>
+                <option value="Funny">Funny</option>
+                <option value="Informative">Informative</option>
+                <option value="Motivational">Motivational</option>
+            </select>
+
+            <label>Options (Extra Instructions)</label>
+            <textarea name="options" rows="3" placeholder="e.g. Keep it short, use bullet points..."></textarea>
+
+            <button type="submit">GENERATE SCRIPT</button>
+        </form>
+
+        {% if script %}
+        <div class="result-box">
+            <h3>Your AI Generated Script:</h3>
+            <div class="script-text">{{ script }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
