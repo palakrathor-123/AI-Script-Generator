@@ -1,4 +1,4 @@
-AI Script Generator
+# AI Script Generator
 An AI-powered Script Generator built using FastAPI, HTML/CSS, and Ollama.
 This project generates scripts instantly based on topic, tone, and user instructions.
 
@@ -95,6 +95,9 @@ Future Improvements
 5. Multiple Language Support
 
  Dashboard Overview
+ <img width="757" height="588" alt="Image" src="https://github.com/user-attachments/assets/4d0809e6-6673-44a6-8f0a-fa6907ad6bc0" />
+
+<img width="692" height="503" alt="Image" src="https://github.com/user-attachments/assets/cd100639-4450-4e65-ab9f-c089138c1c63" />
  
 Author
 Palak Rathore
